@@ -5,7 +5,7 @@
 // @updateURL	https://github.com/NicolasET/lt-downloader/raw/main/main.js
 // @match       https://account.linktrust.com/New/Reports/*
 // @grant       none
-// @version     1.0
+// @version     1.01
 // @author      NicolasET
 // @description LT columns downloader data
 // ==/UserScript==
