@@ -43,7 +43,7 @@ const init = () => {
   console.log("init");
 };
 
-const searchTableColumn = (value) => {
+const searchTableColumn = (value: string | null) => {
   let columnIndex = -1;
   const table = document.querySelector("table.clear.top-margin-small");
   const headers = table
