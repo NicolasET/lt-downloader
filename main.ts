@@ -1,3 +1,15 @@
+// ==UserScript==
+// @name        linktrust-downloader
+// @namespace   LT
+// @downloadURL https://github.com/NicolasET/lt-downloader/raw/main/main.js
+// @updateURL		https://github.com/NicolasET/lt-downloader/raw/main/main.js
+// @match       https://account.linktrust.com/New/Reports/*
+// @grant       none
+// @version     1.0
+// @author      NicolasET
+// @description LT columns downloader data
+// ==/UserScript==
+
 (() => {
   "use strict";
   const existingDiv = document.getElementById("divResults");
