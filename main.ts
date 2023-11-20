@@ -1,4 +1,5 @@
-const init = () => {
+(() => {
+  "use strict";
   const existingDiv = document.getElementById("divResults");
   if (existingDiv) {
     const children = existingDiv.children[0] as HTMLElement;
@@ -36,29 +37,25 @@ const init = () => {
 
     // Insert the new button if the button exists
     existingDiv.appendChild(newDiv);
-  } else {
-    init();
   }
 
-  console.log("init");
-};
-
-const searchTableColumn = (value: string | null) => {
-  let columnIndex = -1;
-  const table = document.querySelector("table.clear.top-margin-small");
-  const headers = table
-    ?.querySelector("tr.table-head")
-    ?.getElementsByTagName("td");
-  if (headers) {
-    for (let i = 0; i < headers.length; i++) {
-      if (headers[i].innerText.trim() === value) {
-        columnIndex = i;
-        break;
+  const searchTableColumn = (value: string | null) => {
+    let columnIndex = -1;
+    const table = document.querySelector("table.clear.top-margin-small");
+    const headers = table
+      ?.querySelector("tr.table-head")
+      ?.getElementsByTagName("td");
+    if (headers) {
+      for (let i = 0; i < headers.length; i++) {
+        if (headers[i].innerText.trim() === value) {
+          columnIndex = i;
+          break;
+        }
       }
     }
-  }
 
-  return { columnIndex, table };
-};
+    return { columnIndex, table };
+  };
 
-init();
+  console.log("init");
+})();
